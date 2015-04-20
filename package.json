@@ -1,6 +1,6 @@
 {
   "name": "beermapping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM module for beermapping.com API.",
   "main": "beermapping.js",
   "scripts": {},
