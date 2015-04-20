@@ -16,6 +16,12 @@ An NPM package for the [beermapping.com](http://beermapping.com) API
 ```javascript
 var BeerMapping = require('beermapping');
   
-var beer = new BeerMapping('<your API key>');
-var intracoastalBrewingCompany = beer.locationsByName('intracoastal');
+var beer = new BeerMapping('<Your API Key>');
+
+var intracoastalBrewingCompany = null;
+beer.locationsByName('intracoastal', function (err, results) {
+  if (!err) {
+    intracoastalBrewingCompany = results.bmp_locations.location[0];
+  }
+});
 ```
